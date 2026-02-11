@@ -13,7 +13,7 @@ body {
     left: 0;
     width: 200%;       /* más grande para poder moverlo */
     height: 200%;
-    background-image: url("./images/HelloKitty.jpg");
+    background-image: url("./HelloKitty.jpg");
     background-size: 120px;
     background-repeat: repeat;
     opacity: 0.12;
