@@ -2,24 +2,39 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Para vos ❤️</title>
+  <title>Feliz San Valentín 💖</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="fondo-kitty">
 
-  <div class="container">
-    <h1>Feliz San Valentín ❤️</h1>
-    <p>
-      Aunque estemos lejos, quiero que sientas que estoy ahí con vos.
-    </p>
+  <div class="hero">
+    
+    <div class="corazon-container">
+      <svg viewBox="0 0 500 500">
+        <defs>
+          <path id="heartPath"
+            d="M250,400 
+               C100,250 50,150 150,100 
+               C200,75 250,125 250,175 
+               C250,125 300,75 350,100 
+               C450,150 400,250 250,400 Z" />
+        </defs>
 
-    <button onclick="mostrarSorpresa()">Haz click 💌</button>
-
-    <div id="sorpresa" class="hidden">
-      Te amo muchísimo 🥹
+        <use href="#heartPath" fill="#ff4d88"/>
+        
+        <text font-size="28" fill="white">
+          <textPath href="#heartPath" startOffset="50%" text-anchor="middle">
+            Feliz San Valentín amor 💖 Te amo a montones
+          </textPath>
+        </text>
+      </svg>
     </div>
+
+    <button onclick="irPagina2()">Seguir 💌</button>
+
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
