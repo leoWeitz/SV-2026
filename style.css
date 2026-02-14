@@ -182,3 +182,76 @@ body {
     cursor: pointer;
   }
   
+  .analisis-container {
+    padding: 100px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .titulo-analisis {
+    font-size: 32px;
+    color: #ff4d88;
+    margin-bottom: 20px;
+  }
+  
+  .subtitulo {
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+  .meme-img {
+    width: 320px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    margin-bottom: 40px;
+    animation: flotar 3s ease-in-out infinite;
+  }
+  
+  @keyframes flotar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .resultado-box {
+    background: #ffb6d9;
+    padding: 35px;
+    border-radius: 30px;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  .barra-container {
+    margin-top: 25px;
+  }
+  
+  .barra-yo,
+  .barra-ella {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  
+  .barra-yo {
+    background: white;
+    color: #ff4d88;
+    width: 100%;
+    animation: crecerYo 2s ease forwards;
+  }
+  
+  .barra-ella {
+    background: #ff85c1;
+    width: 95%;
+    animation: crecerElla 2s ease forwards;
+  }
+  
+  @keyframes crecerYo {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes crecerElla {
+    from { width: 0; }
+    to { width: 95%; }
+  }
+    

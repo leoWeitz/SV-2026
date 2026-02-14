@@ -57,3 +57,7 @@ if (music && toggle) {
 function volver() {
   window.history.back();
 }
+
+function irPagina4() {
+  window.location.href = "page4.html";
+}
