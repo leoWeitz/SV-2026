@@ -77,47 +77,60 @@ const obsFotos = new IntersectionObserver(entries => {
 }, { threshold: 0.15 });
 
 fotos.forEach(f => obsFotos.observe(f));
+document.addEventListener("DOMContentLoaded", () => {
 
-/* =========================
-   MENSAJE FINAL TYPEWRITER
-   ========================= */
+  const textoFinal = `
+Gracias por cada momento,
+por cada risa
+y por cada día incluso a la distancia.
 
-   const textoFinal = `
-   Gracias por cada momento,
-   por cada risa
-   y por cada día incluso a la distancia.
-   
-   Si pudiera elegir otra vez...
-   te volvería a elegir a vos 💗
-   `;
-   
-   const contenedorMensaje = document.getElementById("mensajeFinal");
-   
-   function escribirTexto(texto, elemento, velocidad = 45) {
-     let i = 0;
-   
-     function escribir() {
-       if (i < texto.length) {
-         elemento.textContent += texto.charAt(i);
-         i++;
-         setTimeout(escribir, velocidad);
-       }
-     }
-   
-     escribir();
-   }
-   
-   /* activar solo al llegar al final */
-   if (contenedorMensaje) {
-     const observerFinal = new IntersectionObserver(entries => {
-       entries.forEach(entry => {
-         if (entry.isIntersecting && !contenedorMensaje.dataset.started) {
-           contenedorMensaje.dataset.started = true;
-           escribirTexto(textoFinal, contenedorMensaje);
-         }
-       });
-     }, { threshold: 0.7 });
-   
-     observerFinal.observe(contenedorMensaje);
-   }
-   
+Si pudiera elegir otra vez...
+te volvería a elegir a vos 💗
+`;
+
+  const contenedorMensaje = document.getElementById("mensajeFinal");
+
+  if (!contenedorMensaje) return;
+
+  function escribirTexto(texto, elemento, velocidad = 45) {
+    let i = 0;
+
+    function escribir() {
+      if (i < texto.length) {
+        elemento.textContent += texto.charAt(i);
+        i++;
+        setTimeout(escribir, velocidad);
+      }
+    }
+
+    escribir();
+  }
+
+  // fallback por si el observer no dispara
+  function iniciarMensaje() {
+    if (!contenedorMensaje.dataset.started) {
+      contenedorMensaje.dataset.started = true;
+      escribirTexto(textoFinal, contenedorMensaje);
+    }
+  }
+
+  // observer
+  const observerFinal = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        iniciarMensaje();
+      }
+    });
+  }, { threshold: 0.4 });
+
+  observerFinal.observe(contenedorMensaje);
+
+  // seguridad extra: si el usuario ya está abajo
+  setTimeout(() => {
+    const rect = contenedorMensaje.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      iniciarMensaje();
+    }
+  }, 800);
+
+});
