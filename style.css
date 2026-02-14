@@ -166,12 +166,18 @@ body {
     background: white;
     border: none;
     border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    font-size: 22px;
+    width: 58px;
+    height: 58px;
+    font-size: 24px;
     cursor: pointer;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    transition: 0.2s;
   }
+  
+  .music-btn:hover {
+    transform: scale(1.1);
+  }
+  
   
   .btn-volver {
     position: fixed;

@@ -23,16 +23,36 @@ const observer = new IntersectionObserver(entries => {
 items.forEach(item => observer.observe(item));
 
   
-const musica = document.getElementById("musica");
-const musicBtn = document.getElementById("musicBtn");
+const music = document.getElementById("bgMusic");
+const toggle = document.getElementById("musicToggle");
 
-if (musicBtn) {
-  musicBtn.addEventListener("click", () => {
-    musica.volume = 0.4;
-    musica.play();
-    musicBtn.innerHTML = "💗";
+if (music && toggle) {
+
+  music.volume = 0.35;
+
+  // restaurar estado
+  const isPlaying = localStorage.getItem("musicPlaying") === "true";
+
+  if (isPlaying) {
+    music.play().catch(()=>{});
+    toggle.textContent = "🔊";
+  }
+
+  toggle.addEventListener("click", () => {
+
+    if (music.paused) {
+      music.play();
+      toggle.textContent = "🔊";
+      localStorage.setItem("musicPlaying", "true");
+    } else {
+      music.pause();
+      toggle.textContent = "🔇";
+      localStorage.setItem("musicPlaying", "false");
+    }
+
   });
 }
+
 
 function volver() {
   window.history.back();
