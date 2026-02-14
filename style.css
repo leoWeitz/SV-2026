@@ -301,12 +301,14 @@ body {
   
 
   /* posiciones random tipo polaroid */
-  .foto:nth-child(1){ top: 0; left: 5%; --rot:-8deg; }
-  .foto:nth-child(2){ top: 150px; left: 55%; --rot:6deg; }
-  .foto:nth-child(3){ top: 320px; left: 20%; --rot:-4deg; }
-  .foto:nth-child(4){ top: 480px; left: 60%; --rot:8deg; }
-  .foto:nth-child(5){ top: 650px; left: 10%; --rot:5deg; }
-  .foto:nth-child(6){ top: 820px; left: 50%; --rot:-7deg; }
+/* posiciones random tipo polaroid */
+.galeria > .img-wrapper.foto:nth-child(1){ top: 0; left: 5%; --rot:-8deg; }
+.galeria > .img-wrapper.foto:nth-child(2){ top: 150px; left: 55%; --rot:6deg; }
+.galeria > .img-wrapper.foto:nth-child(3){ top: 320px; left: 20%; --rot:-4deg; }
+.galeria > .img-wrapper.foto:nth-child(4){ top: 480px; left: 60%; --rot:8deg; }
+.galeria > .img-wrapper.foto:nth-child(5){ top: 650px; left: 10%; --rot:5deg; }
+.galeria > .img-wrapper.foto:nth-child(6){ top: 820px; left: 50%; --rot:-7deg; }
+
   
   .foto.visible {
     opacity: 1;
