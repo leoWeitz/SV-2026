@@ -106,15 +106,6 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
   }
   
-  /* burbujas de la nube */
-  .nube::before,
-  .nube::after {
-    content: "";
-    position: absolute;
-    background: #ffb6d9;
-    border-radius: 50%;
-  }
-  
   .nube::before {
     width: 70px;
     height: 70px;
