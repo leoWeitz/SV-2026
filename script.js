@@ -139,10 +139,12 @@ te volvería a elegir a vos 💗
 document.querySelectorAll("img[alt]").forEach(img => {
 
   const wrapper = document.createElement("div");
-  wrapper.className = "img-wrapper";
+  wrapper.className = "img-wrapper " + img.className;
   wrapper.dataset.alt = img.alt;
 
+  img.className = ""; // quitamos clases del img
   img.parentNode.insertBefore(wrapper, img);
   wrapper.appendChild(img);
 
 });
+
