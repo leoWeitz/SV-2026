@@ -255,3 +255,59 @@ body {
     to { width: 95%; }
   }
     
+  .momentos-container {
+    padding: 120px 20px;
+    text-align: center;
+  }
+  
+  .titulo-momentos {
+    font-size: 32px;
+    color: #ff4d88;
+  }
+
+  .galeria {
+    position: relative;
+    max-width: 1000px;
+    margin: 80px auto;
+    min-height: 800px;
+  }
+  
+  .foto {
+    position: absolute;
+    width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    opacity: 0;
+    transform: scale(0.7) rotate(var(--rot));
+    transition: all 1.2s cubic-bezier(.2,.8,.2,1.2);
+  }
+  
+  /* posiciones random tipo polaroid */
+  .foto:nth-child(1){ top: 0; left: 5%; --rot:-8deg; }
+  .foto:nth-child(2){ top: 150px; left: 55%; --rot:6deg; }
+  .foto:nth-child(3){ top: 320px; left: 20%; --rot:-4deg; }
+  .foto:nth-child(4){ top: 480px; left: 60%; --rot:8deg; }
+  .foto:nth-child(5){ top: 650px; left: 10%; --rot:5deg; }
+  .foto:nth-child(6){ top: 820px; left: 50%; --rot:-7deg; }
+  
+  .foto.visible {
+    opacity: 1;
+    transform: scale(1) rotate(var(--rot));
+  }
+
+  .final-texto {
+    margin-top: 900px;
+    background: #ffb6d9;
+    padding: 35px;
+    border-radius: 30px;
+    color: white;
+    display: inline-block;
+  }
+  
+  #mensajeFinal {
+    font-size: 22px;
+    line-height: 1.6;
+    white-space: pre-line;
+    min-height: 120px;
+  }
+  
