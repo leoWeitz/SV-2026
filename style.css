@@ -314,3 +314,32 @@ body {
     min-height: 120px;
   }
   
+  .img-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* tooltip */
+  .img-wrapper::after {
+    content: attr(data-alt);
+    position: absolute;
+    left: 50%;
+    bottom: -45px;
+    transform: translateX(-50%) scale(0.9);
+    background: rgba(255, 182, 217, 0.95);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease;
+    white-space: nowrap;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+  
+  .img-wrapper:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  

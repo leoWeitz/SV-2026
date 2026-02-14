@@ -134,3 +134,15 @@ te volvería a elegir a vos 💗
   }, 800);
 
 });
+
+/* mostrar alt como caption en hover */
+document.querySelectorAll("img[alt]").forEach(img => {
+
+  const wrapper = document.createElement("div");
+  wrapper.className = "img-wrapper";
+  wrapper.dataset.alt = img.alt;
+
+  img.parentNode.insertBefore(wrapper, img);
+  wrapper.appendChild(img);
+
+});
