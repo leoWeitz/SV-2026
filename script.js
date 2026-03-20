@@ -1,6 +1,7 @@
 function irPagina2() {
   window.location.href = "page2.html";
 }
+// seguro que no estas de novio leo?
 
 function irPagina3() {
   window.location.href = "page3.html";
