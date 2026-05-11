@@ -1,11 +1,3 @@
-function irPagina2() {
-  window.location.href = "page2.html";
-}
-
-function irPagina3() {
-  window.location.href = "page3.html";
-}
-
 const items = document.querySelectorAll(".mural-item");
 
 const observer = new IntersectionObserver(entries => {
@@ -58,6 +50,18 @@ function volver() {
 window.history.back();
 }
 
+function irPagina1() {
+  window.location.href = "index.html";
+}
+
+function irPagina2() {
+  window.location.href = "page2.html";
+}
+
+function irPagina3() {
+  window.location.href = "page3.html";
+
+}
 function irPagina4() {
 window.location.href = "page4.html";
 }
