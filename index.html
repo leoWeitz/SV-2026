@@ -2,46 +2,19 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Feliz San Valentín 💖</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aylu & Leo · Nuestra historia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Archivo+Black&family=Archivo:wght@400;600&family=DM+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="museo.css">
 </head>
-<body class="fondo-kitty">
-
-  <div class="hero">
-    
-    <div class="corazon-container">
-      <svg viewBox="0 0 500 500">
-        <defs>
-          <path id="heartPath"
-            d="M250,400 
-               C100,250 50,150 150,100 
-               C200,75 250,125 250,175 
-               C250,125 300,75 350,100 
-               C450,150 400,250 250,400 Z" />
-        </defs>
-
-        <use href="#heartPath" fill="#ff4d88"/>
-        
-        <text font-size="40" fill="white">
-          <textPath href="#heartPath" startOffset="50%" text-anchor="middle">
-            Feliz San Valentín Aylu Te amo a montones
-          </textPath>
-        </text>
-      </svg>
-    </div>
-
-    <button onclick="irPagina2()">Seguir 💌</button>
-
-  </div>
-
-  <audio id="bgMusic" loop>
-    <source src="./resources/music/Taylor Swift - Opalite - LatinHype.mp3" type="audio/mpeg">
-  </audio>
-  
-  <button id="musicToggle" class="music-btn">🔇</button>
-
-  <script src="script.js"></script>  
+<body>
+  <div id="app"></div>
+  <div id="modal"></div>
+  <button id="mute" data-act="toggleMute" aria-label="Silenciar">🔊</button>
+  <div id="kitty"></div>
+  <div id="fade"></div>
+  <script src="museo.js"></script>
 </body>
-
 </html>
-

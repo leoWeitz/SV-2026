@@ -51,7 +51,7 @@ window.history.back();
 }
 
 function irPagina1() {
-  window.location.href = "index.html";
+  window.location.href = "cap1.html";
 }
 
 function irPagina2() {
