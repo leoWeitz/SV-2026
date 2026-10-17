@@ -13,6 +13,7 @@ a{color:#ff8fc0;text-decoration:none}a:hover{color:#ffc2db}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-24px)}}
+@keyframes grow{from{width:0}}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 .rise{animation:rise .6s ease-out both}
 

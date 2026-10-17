@@ -424,9 +424,19 @@ const STORIES = [
   () => `
   <div class="col" style="gap:10px">
     <span class="serif it" style="font-size:clamp(32px,4vw,56px);${rise('0s')}">Este año nos dijimos</span>
-    <span class="big" style="font-size:clamp(100px,19vw,300px)">${N(691)}</span>
+    <span class="big" style="font-size:clamp(100px,19vw,300px)">${N(1958)}</span>
     <span class="black" style="font-size:clamp(40px,6vw,96px);line-height:.9;${rise('.4s')}">"te amo"</span>
     <span class="serif it" style="font-size:clamp(24px,2.6vw,38px);margin-top:18px;${rise('1.6s')}">(en WhatsApp, al menos ji)</span>
+    <span style="font-size:20px;${rise('1.8s')}"><b class="black">≈ 5,4</b> por día, en un año</span>
+    <div class="col" style="gap:10px;margin-top:22px;max-width:720px;${rise('2s')}">
+      <span class="mono" style="font-size:13px;letter-spacing:.2em;opacity:.85">QUIÉN LO DIJO MÁS</span>
+      ${[['LEO', 50.0005, '50,0005%', '#fff4f1'], ['AYLU', 49.9995, '49,9995%', '#ffc2db']].map(([who, w, label, c]) => `
+      <div style="display:grid;grid-template-columns:56px 1fr auto;gap:14px;align-items:center">
+        <span class="mono" style="font-size:13px;letter-spacing:.15em">${who}</span>
+        <div style="height:14px;border-radius:7px;background:#fff4f133;overflow:hidden"><div style="height:100%;width:${w}%;border-radius:7px;background:${c};animation:grow 1.6s cubic-bezier(.3,0,.2,1) 2.3s both"></div></div>
+        <span class="black" style="font-size:18px">${label}</span>
+      </div>`).join('')}
+    </div>
   </div>`,
   () => `
   <div class="g2" style="grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)">
